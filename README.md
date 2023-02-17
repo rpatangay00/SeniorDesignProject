@@ -8,4 +8,5 @@ Repo for all of the components of our project.
 ## Front-end 
 
 [Link to Front End Code](https://github.com/rpatangay00/SeniorDesignProject/tree/main/tutoringacademy_frontend)
+
 [Link to Demo Video of Front End](https://drive.google.com/file/d/1WmBCdSiG2h1pslpuQag3K2hQxxKULlE-/view?usp=share_link)
