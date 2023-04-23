@@ -1,5 +1,7 @@
 import React from 'react';
 import "./index.css";
+import '/Users/rahulsree/SeniorDesignProject/tutoringacademyapp/tutoringacademy-react/src/components/TutorDirectory/assets/main.css';
+import "/Users/rahulsree/SeniorDesignProject/tutoringacademyapp/tutoringacademy-react/src/components/TutorDirectory/assets/tailwind.css";
 import Home from './routes/Home'
 import ListTutors from './routes/ListTutors'
 import InfoTutor from './routes/InfoTutor'

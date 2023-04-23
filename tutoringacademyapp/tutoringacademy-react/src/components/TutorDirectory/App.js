@@ -1,20 +1,10 @@
-// import React from 'react'
-
-// const ListTutors = () => {
-//   return (
-//     <div>All Tutors</div>
-//   )
-// }
-
-// export default ListTutors
-
 import React, { useState, useMemo } from 'react';
-import Layout from "../components/TutorDirectory/components/Layout";
-import Header from "../components/TutorDirectory/components/Header";
-import Navigation from "../components/TutorDirectory/components/Navigation";
-import TutorCardList from "../components/TutorDirectory/components/TutorCardList.js";
-import Footer from "../components/TutorDirectory/components/Footer";
-// import employees from "./components/TutorDirectory/components/data/employees.json";
+import Layout from "./components/Layout";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import TutorCardList from "./components/TutorCardList.js";
+import Footer from "./components/Footer";
+import employees from "./data/employees.json";
 //  import {getAllTutors} from "./services/tutorService.js";
 import axios from 'axios';
 
@@ -38,7 +28,7 @@ import axios from 'axios';
     
 // }
 
-function ListTutors() {
+function App() {
     const [ searchTerm, setSearchTerm ] = useState("");
     const [ sorted, setSorted] = useState(false);
 
@@ -107,7 +97,7 @@ function ListTutors() {
             <Header/>
             <Layout>
                 <h1 className="title text-5xl text-gray-800 mt-16">Tutor Directory</h1>
-                <p className="mb-16 text-md" style={{ color: 'black' }}>Search for an tutor or sort by Name or Category.</p>
+                <p className="mb-16 text-md" style={{ color: 'blue' }}>Search for an tutor or sort by Name or Category.</p>
                 {/*the handleSearchTerm method and searchTerm state get passed down to the Navigation component via props with the onSearch and searchTerm props*/}
                 <Navigation
                     onSearch={handleSearchTerm}
@@ -125,4 +115,4 @@ function ListTutors() {
     )
 }
 
-export default ListTutors;
+export default App;
