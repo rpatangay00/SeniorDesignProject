@@ -1,6 +1,5 @@
 import React from "react";
 import  Navbar  from '/Users/rahulsree/SeniorDesignProject/tutoringacademyapp/tutoringacademy-react/src/components/Navbar.js'
-import logo from "../assets/images/ucf-logo.png";
 
 function Header() {
     return (

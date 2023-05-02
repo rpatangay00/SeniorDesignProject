@@ -91,6 +91,8 @@ function App() {
         (tutor.first_name.concat(" ").concat(tutor.last_name)).toLowerCase().startsWith(searchTerm.toLowerCase()) ||
         tutor.subject.toLowerCase().startsWith(searchTerm.toLowerCase()))
         );
+
+    console.log("Filtered Tutors " + filteredTutors);
     //TODO: search by category
     return (
         <div>

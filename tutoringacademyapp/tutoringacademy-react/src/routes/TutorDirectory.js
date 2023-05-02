@@ -14,31 +14,9 @@ import Header from "../components/TutorDirectory/components/Header";
 import Navigation from "../components/TutorDirectory/components/Navigation";
 import TutorCardList from "../components/TutorDirectory/components/TutorCardList.js";
 import Footer from "../components/TutorDirectory/components/Footer";
-// import employees from "./components/TutorDirectory/components/data/employees.json";
-//  import {getAllTutors} from "./services/tutorService.js";
 import axios from 'axios';
 
-
-// var response = null;
-// (async () => {
-//     console.log("Retrieving Tutors");
-//     response = await getAllTutors();
-//     console.log("response (caller) = " +  JSON.stringify(response.data.body))
-//   })();
-
-  
-// async function getAllTutors() {
-//     try{
-//         const response = await axios.get('https://x4g0ddpp1f.execute-api.us-east-2.amazonaws.com/prod/show/tutors');
-//         console.log("getAllTutors(): " + JSON.stringify(response.data.body));
-//         return response.data.body;
-//     }catch(error) {
-//         return [];
-//     }
-    
-// }
-
-function ListTutors() {
+function TutorDirectory() {
     const [ searchTerm, setSearchTerm ] = useState("");
     const [ sorted, setSorted] = useState(false);
 
@@ -101,14 +79,13 @@ function ListTutors() {
         (tutor.first_name.concat(" ").concat(tutor.last_name)).toLowerCase().startsWith(searchTerm.toLowerCase()) ||
         tutor.subject.toLowerCase().startsWith(searchTerm.toLowerCase()))
         );
-    //TODO: search by category
+
     return (
         <div>
             <Header/>
             <Layout>
                 <h1 className="title text-5xl text-gray-800 mt-16">Tutor Directory</h1>
                 <p className="mb-16 text-md" style={{ color: 'black' }}>Search for an tutor or sort by Name or Category.</p>
-                {/*the handleSearchTerm method and searchTerm state get passed down to the Navigation component via props with the onSearch and searchTerm props*/}
                 <Navigation
                     onSearch={handleSearchTerm}
                     searchTerm={searchTerm}
@@ -116,13 +93,13 @@ function ListTutors() {
                     handleSortByLastName={handleSortByLastName}
                     handleSortBySubject={handleSortBySubject}
                 />
-                {/* the employees array gets the filteredEmployees data via the data prop */}
+
                 <TutorCardList data={filteredTutors}/>
-                {/* <GetRequestHooks /> */}
+
                 <Footer/>
             </Layout>
         </div>
     )
 }
 
-export default ListTutors;
+export default TutorDirectory;

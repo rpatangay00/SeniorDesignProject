@@ -8,6 +8,7 @@ function TutorCardList ({ data }) { // another fancy destructuring to avoid typi
         data.map(tutor => (
             <TutorCard
                 key={tutor.tutor_id}
+                tutor_id = {tutor.tutor_id}
                 // image={tutor.image}
                 first_name={tutor.first_name}
                 last_name={tutor.last_name}

@@ -24,6 +24,7 @@ export const Navbar = () => {
 
 // // window.addEventListener("scroll",changeColor)
 
+//Description: This hides the navbar while scrolling down.
 const [show, setShow] = useState(false);
   const controlNavbar = () => {
     if (window.scrollY > 20) {
@@ -41,7 +42,7 @@ const [show, setShow] = useState(false);
   }, []);
 
   return (
-    <div className={`nav ${show && (color ? "header header-bg": "header")}`}>
+    <div className={`nav ${show}`}>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li>
               <Link to="/">Home</Link>
@@ -50,7 +51,7 @@ const [show, setShow] = useState(false);
               <Link to="/infotutor">Info Tutor</Link>
         </li>  
         <li>
-              <Link to="/listtutors">List Tutors</Link>
+              <Link to="/tutor-directory">Tutor Directory</Link>
         </li>  
         <li>
               <Link to="/myschedule">My Schedule</Link>
