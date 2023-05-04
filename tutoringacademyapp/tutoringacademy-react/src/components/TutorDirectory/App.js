@@ -38,7 +38,7 @@ function App() {
     useMemo( () => {
         const retrieveData = async () => {
             const resp = await axios.get('https://x4g0ddpp1f.execute-api.us-east-2.amazonaws.com/prod/show/tutors');
-            console.log("Response: " + JSON.stringify(resp.data.body));
+            // console.log("Response: " + JSON.stringify(resp.data.body));
             setTutors(resp.data.body);
             // console.log("Data.length: " + data.length);
         }

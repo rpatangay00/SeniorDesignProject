@@ -1,7 +1,6 @@
-import "./NavbarStyles.css"
+import "/Users/rahulsree/SeniorDesignProject/tutoringacademyapp/tutoringacademy-react/src/components/NavbarStyles.css"
 
-
-import React, {useState, useEffect, useCallback, color} from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 
 
@@ -12,19 +11,9 @@ export const Navbar = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
-//     const [color,setColor]= useState(false);
-//     const changeColor = () =>{
-//         const currentScrollPos = window.scrollY;
-//         if(window.scrollY > ){
-//         setVisible(false);
-//     }else{
-//         setColor(false);
-//     }
-//     };
-
-// // window.addEventListener("scroll",changeColor)
 
 //Description: This hides the navbar while scrolling down.
+var fn = "Joe", ln = "Swan";
 const [show, setShow] = useState(false);
   const controlNavbar = () => {
     if (window.scrollY > 20) {
@@ -43,7 +32,18 @@ const [show, setShow] = useState(false);
 
   return (
     <div className={`nav ${show}`}>
+
+        {/* <Link to="/">
+            <img src="./TAlogo.png" alt="React Logo" height={25} /> 
+        </Link> */}
+
+
         <ul className={click ? "nav-menu active" : "nav-menu"}>
+          
+        <div>
+         <img style={{ width: 40, height: 40 }} src={"./TAlogo.png"} alt="React Logo" />
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <li>
               <Link to="/">Home</Link>
         </li>  
@@ -58,7 +58,11 @@ const [show, setShow] = useState(false);
         </li>  
         <li>
               <Link to="/reservetutor">Reserve A Tutor</Link>
-        </li>  
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+              <Link to="/">User: {fn} {ln}</Link>
+        </li> 
         </ul>
         <div className="hamburger" onClick={handleClick}>
             {click ? (<FaTimes size={20} style={{color: "#fff"}} /> ) : 
@@ -66,6 +70,8 @@ const [show, setShow] = useState(false);
         
         
         </div>
+
+        
     </div>
   );
 }
